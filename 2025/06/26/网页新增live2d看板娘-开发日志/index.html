@@ -3,7 +3,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8" />
-    <title>Archives | Torin-xの博客</title>
+    <title>Live2D 开发日志 V1.0 | Torin-xの博客</title>
     <meta name="author" content="Torin-x" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -40,7 +40,9 @@
 
 
 
-<script src="/js/lib/search.js"></script>
+
+
+
 
 
 
@@ -154,106 +156,93 @@
 </transition>
 
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+            <div class="article">
+    <div>
+        <h1>Live2D 开发日志 V1.0</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/6/26
+        </span>
+        
+        <span class="category">
+            <a href="/categories/%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/">
+                <span class="icon">
+                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                </span>
+                开发日志
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
             
-<div id="archives">
-    
-        <input id="search-bar" class="input" placeholder="搜索" v-model="rawSearch" />
-    
-    <div id="timeline-wrap" ref="timeline">
-        
-        
-        
-            <div class="timeline" data-title="helloworld！">
-                <div class="timeline-tail"></div>
-                <div class="timeline-content">
-                    <div class="item-time">2025/6/26</div>
-                    <a href="/2025/06/26/HelloWorld/">
-                        <h3>HelloWorld！</h3>
-                    </a>
-                    <div class="info">
-                        
-                            <span class="category">
-                        <a href="/categories/%E5%85%B6%E4%BB%96/">
-                            <span class="icon">
-                                <i class="fa-solid fa-bookmark fa-fw"></i>
-                            </span>
-                            其他
-                        </a>
-                    </span>
-                        
-                        
-                            <span class="tags">
-                        <span class="icon">
-                            <i class="fa-solid fa-tags fa-fw"></i>
-                        </span>
-                                
-                                
-                                    <span class="tag">
-                                        
-                                        <a href="/tags/helloworld/" style="color: #00bcd4">
-                                helloworld
-                            </a>
-                        </span>
-                                
-                            </span>
-                        
-                    </div>
-                </div>
-            </div>
-        
-            <div class="timeline" data-title="live2d开发日志v1.0">
-                <div class="timeline-tail"></div>
-                <div class="timeline-content">
-                    <div class="item-time">2025/6/26</div>
-                    <a href="/2025/06/26/%E7%BD%91%E9%A1%B5%E6%96%B0%E5%A2%9Elive2d%E7%9C%8B%E6%9D%BF%E5%A8%98-%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/">
-                        <h3>Live2D 开发日志 V1.0</h3>
-                    </a>
-                    <div class="info">
-                        
-                            <span class="category">
-                        <a href="/categories/%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/">
-                            <span class="icon">
-                                <i class="fa-solid fa-bookmark fa-fw"></i>
-                            </span>
-                            开发日志
-                        </a>
-                    </span>
-                        
-                        
-                            <span class="tags">
-                        <span class="icon">
-                            <i class="fa-solid fa-tags fa-fw"></i>
-                        </span>
-                                
-                                
-                                    <span class="tag">
-                                        
-                                        <a href="/tags/Live2D/" style="color: #00a596">
-                                Live2D
-                            </a>
-                        </span>
-                                
-                                    <span class="tag">
-                                        
-                                        <a href="/tags/%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/" style="color: #03a9f4">
-                                开发日志
-                            </a>
-                        </span>
-                                
-                                    <span class="tag">
-                                        
-                                        <a href="/tags/%E9%A1%B9%E7%9B%AE/" style="color: #ffa2c4">
-                                项目
-                            </a>
-                        </span>
-                                
-                            </span>
-                        
-                    </div>
-                </div>
-            </div>
+            
+            <span class="tag">
+                
+                <a href="/tags/Live2D/" style="color: #00a596">
+                    Live2D
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/" style="color: #00bcd4">
+                    开发日志
+                </a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/%E9%A1%B9%E7%9B%AE/" style="color: #ffa2c4">
+                    项目
+                </a>
+            </span>
+            
+        </span>
         
     </div>
+    
+    <div class="content" v-pre>
+        <h1 id="Live2D-看板娘上线-开发日志-V1-0"><a href="#Live2D-看板娘上线-开发日志-V1-0" class="headerlink" title="Live2D 看板娘上线- 开发日志 V1.0"></a>Live2D 看板娘上线- 开发日志 V1.0</h1><span id="more"></span>
+
+<hr>
+<h2 id="✨-已实装功能-V1-0"><a href="#✨-已实装功能-V1-0" class="headerlink" title="✨ 已实装功能 (V1.0)"></a>✨ 已实装功能 (V1.0)</h2><h3 id="💖-一键换装-切换角色"><a href="#💖-一键换装-切换角色" class="headerlink" title="💖 一键换装 &amp; 切换角色"></a>💖 一键换装 &amp; 切换角色</h3><ul>
+<li><strong>如何操作：</strong><ul>
+<li>在看板娘的菜单栏中，找到<strong>切换模型&#x2F;时装</strong>的按钮（👕）。</li>
+<li>每次点击，看板娘都会在不同的模型或服装之间进行切换。</li>
+</ul>
+</li>
+</ul>
+<h3 id="🚀-小游戏：桌面清理大师"><a href="#🚀-小游戏：桌面清理大师" class="headerlink" title="🚀 小游戏：桌面清理大师"></a>🚀 小游戏：桌面清理大师</h3><ul>
+<li><strong>如何启动：</strong><ul>
+<li>在看板娘的菜单栏中，找到<strong>游戏按钮</strong>（✈️）。</li>
+</ul>
+</li>
+<li><strong>操作指南：</strong><ul>
+<li><code>W</code> 键: <strong>前进</strong></li>
+<li><code>A</code> 键: <strong>向左转向</strong></li>
+<li><code>D</code> 键: <strong>向右转向</strong></li>
+<li><code>空格 (Space)</code> 键: <strong>发射子弹</strong></li>
+</ul>
+</li>
+</ul>
+<hr>
+
+    </div>
+    
+    
+    
+    
+    
+    
+    
 </div>
 
             <footer id="footer">
@@ -292,6 +281,12 @@
     <script src="/js/main.js"></script>
 
 <!--    lv2d看板娘-->
+
+
+    
+    
+
+
 
 
     
