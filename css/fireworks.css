@@ -1,0 +1,15 @@
+.heart {
+    position: fixed;
+    font-size: 24px;
+    color: red;
+    pointer-events: none;
+    user-select: none;
+    animation: heart-animation 1s ease-out forwards;
+}
+
+@keyframes heart-animation {
+    to {
+        transform: translateY(-100px); /* 向上漂浮100px */
+        opacity: 0;
+    }
+}
