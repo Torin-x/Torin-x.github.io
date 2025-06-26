@@ -3,7 +3,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8" />
-    <title>Live2D 开发日志 V1.0 | Torin-xの博客</title>
+    <title>快速搭建个人博客网站 | Torin-xの博客</title>
     <meta name="author" content="Torin-x" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -158,7 +158,7 @@
         <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
             <div class="article">
     <div>
-        <h1>Live2D 开发日志 V1.0</h1>
+        <h1>快速搭建个人博客网站</h1>
     </div>
     <div class="info">
         <span class="date">
@@ -169,11 +169,11 @@
         </span>
         
         <span class="category">
-            <a href="/categories/%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/">
+            <a href="/categories/%E6%95%99%E7%A8%8B/">
                 <span class="icon">
                     <i class="fa-solid fa-bookmark fa-fw"></i>
                 </span>
-                开发日志
+                教程
             </a>
         </span>
         
@@ -186,22 +186,8 @@
             
             <span class="tag">
                 
-                <a href="/tags/Live2D/" style="color: #03a9f4">
-                    Live2D
-                </a>
-            </span>
-            
-            <span class="tag">
-                
-                <a href="/tags/%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/" style="color: #00a596">
-                    开发日志
-                </a>
-            </span>
-            
-            <span class="tag">
-                
-                <a href="/tags/%E9%A1%B9%E7%9B%AE/" style="color: #ff7d73">
-                    项目
+                <a href="/tags/%E6%95%99%E7%A8%8B/" style="color: #03a9f4">
+                    教程
                 </a>
             </span>
             
@@ -210,30 +196,95 @@
     </div>
     
     <div class="content" v-pre>
-        <h1 id="Live2D-看板娘上线-开发日志-V1-0"><a href="#Live2D-看板娘上线-开发日志-V1-0" class="headerlink" title="Live2D 看板娘上线- 开发日志 V1.0"></a>Live2D 看板娘上线- 开发日志 V1.0</h1><span id="more"></span>
+        <p>使用hexo框架快速上手搭建网站</p>
+<span id="more"></span>
 
-<hr>
-<h2 id="✨-已实装功能-V1-0"><a href="#✨-已实装功能-V1-0" class="headerlink" title="✨ 已实装功能 (V1.0)"></a>✨ 已实装功能 (V1.0)</h2><h3 id="💖-一键换装-切换角色"><a href="#💖-一键换装-切换角色" class="headerlink" title="💖 一键换装 &amp; 切换角色"></a>💖 一键换装 &amp; 切换角色</h3><ul>
-<li><strong>如何操作：</strong><ul>
-<li>在看板娘的菜单栏中，找到<strong>切换模型&#x2F;时装</strong>的按钮（👕）。</li>
-<li>每次点击，看板娘都会在不同的模型或服装之间进行切换。</li>
+<h2 id="0-前言"><a href="#0-前言" class="headerlink" title="0 前言"></a>0 前言</h2><p>分享我如何在三天内搭建的个人简易博客网站，有句话说的好：前人造的轮子我不用那我不成傻子了。</p>
+<p>当然如此快速的搭建是基于 (<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a>) 这个成熟的框架，下面介绍如何使用。</p>
+<h2 id="1-安装Hexo"><a href="#1-安装Hexo" class="headerlink" title="1.安装Hexo"></a>1.安装Hexo</h2><h4 id="1-1-安装Git-和-Node-js-准备工作"><a href="#1-1-安装Git-和-Node-js-准备工作" class="headerlink" title="1.1  安装Git 和 Node.js (准备工作)"></a>1.1  安装Git 和 Node.js (准备工作)</h4><p> 详细内容在官方文档和各种教程都能搜到，不多阐述</p>
+<p><a target="_blank" rel="noopener" href="https://git-scm.com/downloads">Git - Downloads</a></p>
+<p><a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn">Node.js</a></p>
+<h4 id="1-2-安装-Hexo"><a href="#1-2-安装-Hexo" class="headerlink" title="1.2 安装 Hexo"></a>1.2 安装 Hexo</h4><p>新建文件夹作为博客根目录，进入目录在终端中输入</p>
+<pre><code class="language-powershell">npm install -g hexo-cli
+</code></pre>
+<h2 id="2-建立网站"><a href="#2-建立网站" class="headerlink" title="2.建立网站"></a>2.建立网站</h2><p>同样在根目录下</p>
+<pre><code class="language-powershell">hexo init &quot;folder&quot;
+</code></pre>
+<p>其中 “folder” 为你网页想取的名字</p>
+<pre><code class="language-powershell">cd &quot;folder&quot;
+npm install
+</code></pre>
+<p>如果上述 npm 安装出现 <strong>error</strong> 则大概率是权限问题，请用 <strong>管理员身份</strong> 打开终端进入该文件重新安装</p>
+<p>初始化完成可以看到如下文件夹</p>
+<pre><code class="language-bash">.
+├── _config.yml
+├── package.json
+├── scaffolds
+├── source
+|   ├── _drafts
+|   └── _posts
+└── themes
+</code></pre>
+<p>这样我们就得到了一个最简单的网页</p>
+<p>执行下面命令启动</p>
+<pre><code class="language-powershell">hexo s
+</code></pre>
+<p>弹出链接 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a> ，在浏览器打开即可看到初始网页。</p>
+<p>更多 hexo 使用方式请看官方文档 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/commands">指令 | Hexo</a></p>
+<h2 id="3-安装主题"><a href="#3-安装主题" class="headerlink" title="3.安装主题"></a>3.安装主题</h2><h4 id="3-1-安装"><a href="#3-1-安装" class="headerlink" title="3.1 安装"></a>3.1 安装</h4><p>Hexo 官网给出了自定义板块，其中就包括了 <a target="_blank" rel="noopener" href="https://hexo.io/themes/">Themes | Hexo</a> ，在这里面有大量个人上传的主题，挑一个你喜欢的用吧。</p>
+<p>点进链接能进入到 GitHub 项目</p>
+<p>将项目克隆到本地</p>
+<pre><code class="language-powershell">cd themes
+git clone &quot;git_url&quot;
+</code></pre>
+<p>其中 “git_url” 为主题的 GitHub 项目链接。</p>
+<p>这时打开根目录下的 _config.yml 将里面的</p>
+<pre><code class="language-yaml">theme : &quot;主题文件夹的名字&quot;
+</code></pre>
+<p>更多 _config.yml 配置请看作者 GitHub 项目下的具体配置说明。</p>
+<h4 id="3-2-运行"><a href="#3-2-运行" class="headerlink" title="3.2  运行"></a>3.2  运行</h4><pre><code class="language-powershell">hexo s
+</code></pre>
+<p>刷新网页即可显示。</p>
+<h2 id="4-自定义主题"><a href="#4-自定义主题" class="headerlink" title="4.自定义主题"></a>4.自定义主题</h2><p>包括自定义 <strong>css</strong>&#x2F; <strong>js</strong> ,以及添加插件，这里给出样例，更多的请自行探索。</p>
+<h4 id="4-1-Live2d-插件"><a href="#4-1-Live2d-插件" class="headerlink" title="4.1 Live2d 插件"></a>4.1 Live2d 插件</h4><p>这里用的是 <a target="_blank" rel="noopener" href="https://github.com/stevenjoezhang/live2d-widget">live2d-widget</a> 项目 </p>
+<p>作者文档已经详细说明该如何使用，自认为不会讲的比它好 <del>（绝对不是因为懒了）</del></p>
+<h2 id="5-将网站从本地部署改成-GitHub-部署"><a href="#5-将网站从本地部署改成-GitHub-部署" class="headerlink" title="5.将网站从本地部署改成 GitHub 部署"></a>5.将网站从本地部署改成 GitHub 部署</h2><h4 id="5-1-新建-GitHub-仓库"><a href="#5-1-新建-GitHub-仓库" class="headerlink" title="5.1  新建 GitHub 仓库"></a>5.1  新建 GitHub 仓库</h4><p> 首先新建仓库  <a target="_blank" rel="noopener" href="https://github.com/new">New repository</a>  填入 “user”.github.io , “user” 为你GitHub的<strong>用户名</strong> 。</p>
+<h4 id="5-2获取-SSH-密钥"><a href="#5-2获取-SSH-密钥" class="headerlink" title="5.2获取 SSH 密钥"></a>5.2获取 SSH 密钥</h4><p>将邮箱换成你自己的</p>
+<pre><code class="language-bash">ssh-keygen -t ed25519 -C &quot;your_email@example.com&quot;
+</code></pre>
+<p>复制 ssh密钥</p>
+<pre><code class="language-powershell">Get-Content $env:USERPROFILE\.ssh\id_ed25519.pub | Set-Clipboard
+</code></pre>
+<h4 id="5-3-添加到-GitHub："><a href="#5-3-添加到-GitHub：" class="headerlink" title="5.3 添加到 GitHub："></a>5.3 <strong>添加到 GitHub：</strong></h4><ul>
+<li>回到 GitHub 网站，点击右上角的头像，选择 <strong>“Settings”</strong>。</li>
+<li>在左侧菜单中，点击 <strong>“SSH and GPG keys”</strong>。</li>
+<li>点击绿色的 <strong>“New SSH key”</strong> 按钮。</li>
+<li><strong>Title</strong> 可以随意填写。</li>
+<li>在 <strong>Key</strong> 的文本框中，粘贴密钥。</li>
+<li>点击 <strong>“Add SSH key”</strong>。</li>
 </ul>
-</li>
-</ul>
-<h3 id="🚀-小游戏：桌面清理大师"><a href="#🚀-小游戏：桌面清理大师" class="headerlink" title="🚀 小游戏：桌面清理大师"></a>🚀 小游戏：桌面清理大师</h3><ul>
-<li><strong>如何启动：</strong><ul>
-<li>在看板娘的菜单栏中，找到<strong>游戏按钮</strong>（✈️）。</li>
-</ul>
-</li>
-<li><strong>操作指南：</strong><ul>
-<li><code>W</code> 键: <strong>前进</strong></li>
-<li><code>A</code> 键: <strong>向左转向</strong></li>
-<li><code>D</code> 键: <strong>向右转向</strong></li>
-<li><code>空格 (Space)</code> 键: <strong>发射子弹</strong></li>
-</ul>
-</li>
-</ul>
-<hr>
+<h4 id="5-4-测试"><a href="#5-4-测试" class="headerlink" title="5.4 测试"></a>5.4 测试</h4><pre><code class="language-bash">ssh -T git@github.com
+</code></pre>
+<p>如果是第一次链接会弹出提示，此时输入 <strong>yes</strong> 即可</p>
+<p>出现</p>
+<pre><code class="language-bash">Hi &lt;Your-Username&gt;! You&#39;ve successfully authenticated, but GitHub does not provide shell access.
+</code></pre>
+<p>代表连接成功。</p>
+<h4 id="5-5-部署hexo"><a href="#5-5-部署hexo" class="headerlink" title="5.5  部署hexo"></a>5.5  部署hexo</h4><p>安装 hexo 插件来将文件推送到 GItHub</p>
+<p><strong>进入博客根目录</strong></p>
+<pre><code class="language-bash">npm install hexo-deployer-git --save
+</code></pre>
+<p><strong>配置 _config.yml</strong> </p>
+<pre><code class="language-yaml">deploy:
+  type: git
+  repo: git@github.com:你的GitHub用户名/你的GitHub用户名.github.io.git
+  branch: main
+</code></pre>
+<p><strong>启动</strong></p>
+<pre><code class="language-bash">hexo cl
+hexo d -g
+</code></pre>
+<p>此时回到仓库发现已经不是空的，稍等几分钟访问  <a target="_blank" rel="noopener" href="https://user.github.io/">https://user.github.io/</a> 可以看到你的网站，即代表部署完成。每次做修改完按上述 <strong>启动</strong> 即可修改。</p>
 
     </div>
     
