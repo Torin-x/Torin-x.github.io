@@ -1,3 +1,4 @@
+# Hexo
 .DS_Store
 Thumbs.db
 db.json
@@ -5,4 +6,4 @@ db.json
 node_modules/
 public/
 .deploy*/
-_multiconfig.yml
+.deploy_git/
