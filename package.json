@@ -32,6 +32,6 @@
     "live2d-widget-model-gf": "^1.0.5",
     "live2d-widget-model-shizuku": "^1.0.5",
     "live2d-widget-model-wanko": "^1.0.5",
-    "semver": "^7.7.2"
+    "semver": "^7.7.3"
   }
 }
