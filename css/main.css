@@ -661,6 +661,27 @@ body::-webkit-scrollbar-track {
     background-color: #3392ff2a;
     color: unset;
 }
+details {
+    margin: 15px 0;
+    padding: 10px;
+    background: #f6f8fa;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+}
+details summary {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px;
+    user-select: none;
+}
+details summary:hover {
+    color: #66afef;
+}
+details[open] summary {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #d0d7de;
+    padding-bottom: 10px;
+}
 a {
     color: #66afef;
     text-decoration: none;
